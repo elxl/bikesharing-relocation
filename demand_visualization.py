@@ -19,6 +19,6 @@ def demand_visualization(year, month, day):
     flow_in_hour.plot()
 
     #save figure
-    plt.savefig("demand_fluctuation_on_{}-{}-{}".format(year, month, day))
+    plt.savefig("demand_fluctuation_on_{}-{}-{}.png".format(year, month, day))
 
-demand_visualization(2017, 10, 4)
+demand_visualization(2017, 10, 4)# change date here in year, month, day

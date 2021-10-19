@@ -5,12 +5,11 @@ This is the code to get trip data as input and output the demand for each cell
 '''
 import pandas as pd
 import numpy as np
-import time
 import math
 import matplotlib.pyplot as plt
 import datetime
 
-df = pd.read_csv('sample_data.csv')
+df = pd.read_csv('sample_data.csv')# change file name here
 
 #---------data preprossing by time duration, trip distance and speed using interquatile range------#
 # get IQR
