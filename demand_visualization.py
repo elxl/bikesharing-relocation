@@ -13,10 +13,13 @@ def demand_visualization(year, month, day):
            day, int
     output: generate a figure
     '''
-    date = str(datetime.date(2017,10,4))#get date in string
+    date = str(datetime.date(year, month, day))#get date in string
     flow_in_hour = df[df['date']==date].groupby('start_hour')# group trips by hour
     flow_in_hour = flow_in_hour.count()['bike_id']# count trips
     flow_in_hour.plot()
+    plt.xlabel("time")
+    plt.ylabel("demand")
+    plt.title("Demand fluctuation in {}-{}-{}".format(year,month,day))
 
     #save figure
     plt.savefig("demand_fluctuation_on_{}-{}-{}.png".format(year, month, day))

@@ -41,6 +41,7 @@ def linear_referencing(locpair):
     y_max = 1.470763
     lon_diff = 0.00269582
     lat_diff = 0.00271293
+
     cell_id = math.floor((locpair[1]-x_min)/lon_diff) + \
         180 * math.floor((y_max-locpair[0])/lat_diff)
     return cell_id
@@ -51,6 +52,7 @@ df['cell_end'] = df.apply(lambda x:linear_referencing((x['lat1'],x['lng1'])),axi
 df = df.drop(columns = ['lng0','lat0','lng1','lat1'])
 
 #--------------------------------------------------------------------------------------------------#
+
 
 #----------------------------------time format transformation--------------------------------------#
 # transform time from absolute seconds to timestamp (in Singapore)
@@ -70,6 +72,7 @@ df['date'] = df['time_start'].dt.date
 df['dayofweek']=df['time_start'].dt.dayofweek
 
 #-------------------------------------------------------------------------------------------------#
+
 
 # output file for visualization of demand fluctuation
 df.to_csv("demand_visualization_data.csv", index = False)
