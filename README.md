@@ -33,7 +33,7 @@ The sample_data.csv is composed of trip data. In the data file, every row stands
 
 To get the flow result from other original data (needs to be in the same form with sample_data.csv), put the data file and get_demand.py in one folder. If your file is with a different name, go to get_demand.py and demand_visualization.py then change the first line of name of file to read. 
 
-If you want to get image of demand fluctuation for another day, go into demand_visualization.py and change the date you want to visualize in the last line.
+If you want to get image of demand fluctuation for another day, go into demand_visualization.py and change the date you want to visualize in the last line. If you want to try different date with sample_data.csv, choose among 2017/10/4, 017/10/5, 017/10/6. 
 
 ## Authors
 [Xinling Li](mailto:li.xinling@epfl.ch)
